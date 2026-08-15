@@ -7,8 +7,15 @@ Quick start:
   - Read `:help`
   - Search the help tags with `<space>sh`
 
+Package management:
+  - Inspect plugin state and pending updates:
+      :ConfigStatus or vim.pack.update(nil, { offline = true })
+  - Update plugins:
+      :ConfigUpdate or :lua vim.pack.update()
+
 Troubleshooting:
   - Run `:checkhealth` if startup, providers, or plugins misbehave
+
 Navigation notes:
   - Folding:
       za  toggle fold under cursor
