@@ -295,8 +295,24 @@ _G.gh = GH -- Make the GitHub URL helper available to all configuration modules.
 
 -- }}}
 
+-- ============================================================
+-- PLUGIN CONFIGURATION
+-- non-optional plugin setup modules
+-- ============================================================
 -- Plugin setup is loaded explicitly below from `lua/config/*.lua`.
 -- NOTE: Use `gf` on a `require 'config.*'` line to open that module.
 require 'config.ui'
+require 'config.telescope'
+require 'config.treesitter'
+require 'config.lsp'
+require 'config.formatting'
+require 'config.autocomplete'
+require 'config.oil'
+
+-- Auto-load modules in lua/config
+-- require('config.utils').require_all {
+--   exclude = { 'utils.lua', 'health.lua' },
+-- }
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: set foldmethod=marker foldlevelstart=99 ts=2 sts=2 sw=2 et:
