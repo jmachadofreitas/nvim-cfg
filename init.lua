@@ -284,7 +284,19 @@ do
       end
     end,
   })
-end -- }}}
+end
 
+---Because most plugins are hosted on GitHub, you can use the helper
+---function to have less repetition in the following sections.
+---@param repo string
+---@return string
+function GH(repo) return 'https://github.com/' .. repo end
+_G.gh = GH -- Make the GitHub URL helper available to all configuration modules.
+
+-- }}}
+
+-- Plugin setup is loaded explicitly below from `lua/config/*.lua`.
+-- NOTE: Use `gf` on a `require 'config.*'` line to open that module.
+require 'config.ui'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: set foldmethod=marker foldlevelstart=99 ts=2 sts=2 sw=2 et:
