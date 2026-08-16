@@ -314,5 +314,22 @@ require 'config.oil'
 --   exclude = { 'utils.lua', 'health.lua' },
 -- }
 
+-- ============================================================
+-- OPTIONALS
+-- optional.plugins.* examples
+-- ============================================================
+-- OPTIONALS
+do
+  --  Uncomment any of the lines below to enable them (you will need to restart nvim).
+  require 'optional.plugins.debug'
+  require 'optional.plugins.lint'
+  require 'optional.plugins.gitsigns' -- adds gitsigns recommended keymaps
+  require 'optional.plugins.lazygit' -- floating LazyGit terminal
+  -- require 'optional.plugins.neogit' -- Magit-style Git interface
+  -- require 'optional.plugins.neo-tree' -- alternative file explorer
+  -- require 'optional.plugins.indent_line'
+  -- require 'optional.plugins.autopairs'
+end
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: set foldmethod=marker foldlevelstart=99 ts=2 sts=2 sw=2 et:
