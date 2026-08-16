@@ -1,1 +1,14 @@
+# Local editor configuration
 .luarc.json
+.nvim.lua
+.nvimrc
+.exrc
+
+# Generated editor files
+tags
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
