@@ -329,6 +329,7 @@ do
   -- require 'optional.plugins.neo-tree' -- alternative file explorer
   -- require 'optional.plugins.indent_line'
   -- require 'optional.plugins.autopairs'
+  require('optional.plugins.marquee').setup() -- better UX around native marks
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
