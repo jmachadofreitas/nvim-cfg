@@ -2,6 +2,9 @@
 
 vim.pack.add { 'https://github.com/mfussenegger/nvim-lint' }
 
+-- Do not register lint autocmds unless the configured linter is available.
+if vim.fn.executable 'markdownlint' ~= 1 then return end
+
 local lint = require 'lint'
 lint.linters_by_ft = {
   markdown = { 'markdownlint' }, -- Make sure to install `markdownlint` via mason / npm
